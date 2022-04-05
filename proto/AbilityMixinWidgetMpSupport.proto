@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message AbilityMixinWidgetMpSupport {
+	uint32 target_entity_id = 1;
+}

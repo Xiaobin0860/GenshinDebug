@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message AcceptCityReputationRequestReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 2842;
+	}
+
+	uint32 city_id = 1;
+	uint32 request_id = 2;
+}

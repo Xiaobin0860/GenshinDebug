@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+message SummerTimeSprintBoatSettleNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8956;
+	}
+
+	bool is_success = 1;
+	uint32 left_time = 2;
+	uint32 collect_num = 3;
+	uint32 total_num = 4;
+	uint32 score = 5;
+	bool is_new_record = 6;
+	uint32 medal_level = 7;
+	uint32 group_id = 8;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message Investigation {
+	enum State {
+		INVALID = 0;
+		IN_PROGRESS = 1;
+		COMPLETE = 2;
+		REWARD_TAKEN = 3;
+	}
+
+	uint32 id = 1;
+	uint32 progress = 2;
+	uint32 total_progress = 3;
+	State state = 4;
+}

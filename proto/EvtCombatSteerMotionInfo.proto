@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtCombatSteerMotionInfo {
+	uint32 entity_id = 1;
+	Vector velocity = 2;
+	Vector face_dir = 3;
+	Vector pos = 4;
+}

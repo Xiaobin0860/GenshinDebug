@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message ClientLoadingCostumeVerificationNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 3184;
+	}
+
+	uint32 costume_id = 1;
+	uint64 guid = 2;
+	uint64 prefab_hash = 3;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "FriendBrief.proto";
+
+message PSNFriendListNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4097;
+	}
+
+	repeated FriendBrief psn_friend_list = 1;
+}

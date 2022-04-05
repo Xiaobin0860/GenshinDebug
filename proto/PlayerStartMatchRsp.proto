@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "MatchType.proto";
+
+message PlayerStartMatchRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4193;
+	}
+
+	int32 retcode = 1;
+	MatchType match_type = 2;
+	uint32 param = 3;
+	uint32 dungeon_id = 11;
+	uint32 mp_play_id = 12;
+	uint32 mechanicus_difficult_level = 13;
+	uint32 match_id = 14;
+	uint32 punish_end_time = 15;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message AbilityApplyLevelModifier {
+	uint32 apply_entity_id = 1;
+}

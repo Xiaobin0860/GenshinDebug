@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "PropChangeReason.proto";
+
+message AvatarPropChangeReasonNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1261;
+	}
+
+	uint64 avatar_guid = 1;
+	uint32 prop_type = 2;
+	float old_value = 3;
+	float cur_value = 4;
+	PropChangeReason reason = 5;
+}

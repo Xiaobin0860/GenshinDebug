@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message LockedPersonallineData {
+	enum LockReason {
+		LEVEL = 0;
+		QUEST = 1;
+	}
+
+	oneof Param {
+		uint32 chapter_id = 3;
+		uint32 level = 4;
+	}
+	uint32 personal_line_id = 1;
+	LockReason lock_reason = 2;
+}

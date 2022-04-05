@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message WeatherInfo {
+	uint32 weather_area_id = 1;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "FishEscapeReason.proto";
+
+message FishEscapeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5815;
+	}
+
+	repeated uint32 fish_id_list = 1;
+	Vector pos = 2;
+	uint32 uid = 3;
+	FishEscapeReason reason = 4;
+}

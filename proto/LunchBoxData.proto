@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message LunchBoxData {
+	map<uint32, uint32> slot_material_map = 1;
+}

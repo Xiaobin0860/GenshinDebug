@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "AISnapshotEntitySkillCycle.proto";
+
+message AISnapshotEntityData {
+	uint32 entity_id = 1;
+	float real_time = 2;
+	float tick_time = 3;
+	uint32 tactic = 4;
+	float distance_to_player = 5;
+	uint32 threat_list_size = 6;
+	uint32 threat_target_id = 7;
+	uint32 ai_target_id = 8;
+	uint32 attack_target_id = 9;
+	float moved_distance = 10;
+	repeated AISnapshotEntitySkillCycle finished_skill_cycles = 11;
+	map<uint32, uint32> hitting_avatars = 12;
+}

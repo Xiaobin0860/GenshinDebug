@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message RoguelikeSettleCoinInfo {
+	uint32 cell_num = 1;
+	uint32 coin_b = 2;
+	uint32 coin_c = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "HomeLimitedShopGoods.proto";
+
+message HomeLimitedShopBuyGoodsRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4489;
+	}
+
+	int32 retcode = 1;
+	HomeLimitedShopGoods goods = 2;
+	uint32 buy_count = 3;
+	repeated HomeLimitedShopGoods goods_list = 4;
+}

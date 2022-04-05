@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "MotionInfo.proto";
+
+message ForceDragAvatarNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3150;
+	}
+
+	uint32 entity_id = 1;
+	MotionInfo motion_info = 2;
+	uint32 scene_time = 3;
+	uint64 last_move_time_ms = 4;
+	uint64 delta_time_ms = 5;
+	bool is_first_valid = 6;
+}

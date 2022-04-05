@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message StrengthenPointData {
+	uint32 base_point = 1;
+	uint32 cur_point = 2;
+}

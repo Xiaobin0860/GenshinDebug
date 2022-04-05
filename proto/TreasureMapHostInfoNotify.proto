@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message TreasureMapHostInfoNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8160;
+	}
+
+	repeated uint32 mp_challenge_region_list = 1;
+}

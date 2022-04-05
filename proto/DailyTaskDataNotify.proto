@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message DailyTaskDataNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 153;
+	}
+
+	uint32 score_reward_id = 3;
+	bool is_taken_score_reward = 4;
+	uint32 finished_num = 5;
+}

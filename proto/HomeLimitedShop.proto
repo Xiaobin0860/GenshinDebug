@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "HomeLimitedShopGoods.proto";
+
+message HomeLimitedShop {
+	repeated HomeLimitedShopGoods goods_list = 1;
+}

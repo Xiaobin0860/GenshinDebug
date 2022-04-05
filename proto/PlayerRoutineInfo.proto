@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message PlayerRoutineInfo {
+	uint32 routine_type = 1;
+	uint32 finished_num = 2;
+}

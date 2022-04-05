@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "AISnapshotEntityData.proto";
+
+message AISnapshotInfo {
+	repeated AISnapshotEntityData ai_snapshots = 1;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "HomeVerifyFurnitureData.proto";
+import "HomeVerifyImageData.proto";
+
+message HomeVerifyBlockData {
+	uint32 block_id = 1;
+	repeated HomeVerifyFurnitureData furnitures = 2;
+	repeated HomeVerifyImageData images = 3;
+}

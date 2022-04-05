@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message ChessNormalCardInfo {
+	uint32 card_id = 1;
+	uint32 cost_points = 2;
+	bool is_attach_curse = 3;
+}

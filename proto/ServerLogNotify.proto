@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "ServerLogType.proto";
+import "ServerLogLevel.proto";
+
+message ServerLogNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		ENET_CHANNEL_ID = 1;
+		CMD_ID = 12;
+	}
+
+	ServerLogType log_type = 1;
+	ServerLogLevel log_level = 2;
+	string server_log = 3;
+}

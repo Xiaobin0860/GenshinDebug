@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "QueryFilter.proto";
+import "Vector3Int.proto";
+
+message QueryPathReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 2349;
+	}
+
+	enum OptionType {
+		OPTION_NONE = 0;
+		OPTION_NORMAL = 1;
+		OPTION_FIRST_CAN_GO = 2;
+	}
+
+	OptionType query_type = 1;
+	int32 query_id = 2;
+	uint32 scene_id = 3;
+	Vector source_pos = 4;
+	repeated Vector destination_pos = 5;
+	QueryFilter filter = 6;
+	Vector3Int destination_extend = 7;
+	Vector3Int source_extend = 8;
+}

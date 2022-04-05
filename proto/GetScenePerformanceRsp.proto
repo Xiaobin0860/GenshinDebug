@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message GetScenePerformanceRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3298;
+	}
+
+	int32 retcode = 1;
+	Vector pos = 2;
+	uint32 group_num = 3;
+	uint32 entity_num = 4;
+	uint32 dynamic_group_num = 5;
+	uint32 monster_num = 6;
+	uint32 gadget_num = 7;
+	uint32 gather_num = 8;
+	uint32 gather_num_insight = 9;
+}

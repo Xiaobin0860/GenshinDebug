@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message AvatarSatiationData {
+	uint64 avatar_guid = 1;
+	float finish_time = 2;
+	float penalty_finish_time = 3;
+}

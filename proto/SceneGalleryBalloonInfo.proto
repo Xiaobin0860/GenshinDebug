@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "BalloonPlayerInfo.proto";
+
+message SceneGalleryBalloonInfo {
+	map<uint32, BalloonPlayerInfo> scene_player_balloon_info_map = 1;
+	uint32 end_time = 2;
+}

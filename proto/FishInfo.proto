@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message FishInfo {
+	uint32 into_bag_count = 1;
+	uint32 free_count = 2;
+}

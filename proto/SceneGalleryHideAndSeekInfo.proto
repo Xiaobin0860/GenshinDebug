@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message SceneGalleryHideAndSeekInfo {
+	repeated uint32 visible_uid_list = 1;
+	repeated uint32 caught_uid_list = 2;
+}

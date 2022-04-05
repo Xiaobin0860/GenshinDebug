@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message AbilityMetaLoseHp {
+	uint32 lose_hp_config_idx = 1;
+}

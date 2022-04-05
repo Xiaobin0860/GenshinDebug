@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "FishBattleResult.proto";
+import "ItemParam.proto";
+
+message FishBattleEndRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5809;
+	}
+
+	enum FishNoRewardReason {
+		FISH_NO_REWARD_NONE = 0;
+		FISH_NO_REWARD_ACTIVITY_LIMIT = 1;
+		FISH_NO_REWARD_BAG_LIMIT = 2;
+		FISH_NO_REWARD_POOL_LIMIT = 3;
+	}
+
+	int32 retcode = 1;
+	FishBattleResult battle_result = 2;
+	bool is_got_reward = 3;
+	FishNoRewardReason no_reward_reason = 4;
+	repeated ItemParam reward_item_list = 5;
+	repeated ItemParam drop_item_list = 6;
+	repeated ItemParam talent_item_list = 7;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message MechanicusLevelupGearRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3979;
+	}
+
+	int32 retcode = 1;
+	uint32 mechanicus_id = 2;
+	uint32 gear_id = 3;
+	uint32 after_gear_level = 4;
+}

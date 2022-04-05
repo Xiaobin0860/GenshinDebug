@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+message AISnapshotEntitySkillCycle {
+	uint32 skill_id = 1;
+	bool selected = 2;
+	bool trydoskill = 3;
+	bool success = 4;
+	bool failed = 5;
+}

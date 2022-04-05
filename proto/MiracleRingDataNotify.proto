@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+message MiracleRingDataNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5227;
+	}
+
+	uint32 last_deliver_item_time = 1;
+	uint32 last_take_reward_time = 2;
+	uint32 miracle_ring_cd = 3;
+	bool is_gadget_created = 4;
+	uint32 gadget_entity_id = 5;
+}

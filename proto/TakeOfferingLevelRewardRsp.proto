@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "ItemParam.proto";
+
+message TakeOfferingLevelRewardRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2910;
+	}
+
+	int32 retcode = 1;
+	uint32 offering_id = 2;
+	uint32 take_level = 3;
+	repeated ItemParam item_list = 4;
+}

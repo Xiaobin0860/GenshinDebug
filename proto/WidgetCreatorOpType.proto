@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+enum WidgetCreatorOpType {
+	WIDGET_CREATOR_TYPE_NONE = 0;
+	WIDGET_CREATOR_TYPE_RETRACT = 1;
+	WIDGET_CREATOR_TYPE_RETRACT_AND_CREATE = 2;
+}

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "TowerLevelEndNotify.proto";
+import "TrialAvatarFirstPassDungeonNotify.proto";
+import "ChannellerSlabLoopDungeonResultInfo.proto";
+import "EffigyChallengeDungeonResultInfo.proto";
+import "RoguelikeDungeonSettleInfo.proto";
+import "ParamList.proto";
+import "StrengthenPointData.proto";
+import "DungeonSettleExhibitionInfo.proto";
+
+message DungeonSettleNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 979;
+	}
+
+	oneof Detail {
+		TowerLevelEndNotify tower_level_end_notify = 101;
+		TrialAvatarFirstPassDungeonNotify trial_avatar_first_pass_dungeon_notify = 102;
+		ChannellerSlabLoopDungeonResultInfo channeller_slab_loop_dungeon_result_info = 103;
+		EffigyChallengeDungeonResultInfo effigy_challenge_dungeon_result_info = 104;
+		RoguelikeDungeonSettleInfo roguelike_dungeon_settle_info = 105;
+	}
+	uint32 dungeon_id = 1;
+	bool is_success = 2;
+	repeated uint32 fail_cond_list = 3;
+	map<uint32, ParamList> settle_show = 4;
+	uint32 close_time = 5;
+	map<uint32, StrengthenPointData> strengthen_point_data_map = 6;
+	uint32 result = 7;
+	repeated DungeonSettleExhibitionInfo exhibition_info_list = 8;
+}

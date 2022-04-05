@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message HideAndSeekActivityDetailInfo {
+	repeated uint32 chosen_hunter_skill_list = 1;
+	repeated uint32 chosen_hider_skill_list = 2;
+	repeated uint32 unlock_map_list = 3;
+}

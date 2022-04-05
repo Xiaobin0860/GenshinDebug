@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "MapMarkTipsType.proto";
+
+message MapMarkTipsInfo {
+	MapMarkTipsType tips_type = 1;
+	repeated uint32 point_id_list = 2;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+
+message AbilityMixinGlobalShield {
+	float sub_shield = 1;
+	uint32 avatar_id = 2;
+	string shield_effect_name = 3;
+	float height_offset = 4;
+	bool is_create_effect = 5;
+	float max_shield = 6;
+}

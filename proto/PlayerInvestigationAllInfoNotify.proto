@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Investigation.proto";
+import "InvestigationTarget.proto";
+
+message PlayerInvestigationAllInfoNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1927;
+	}
+
+	repeated Investigation investigation_list = 1;
+	repeated InvestigationTarget investigation_target_list = 2;
+}

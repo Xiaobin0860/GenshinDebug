@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "HuntingPair.proto";
+import "Vector.proto";
+
+message HuntingStartNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4307;
+	}
+
+	HuntingPair hunting_pair = 1;
+	Vector clue_position = 2;
+	uint32 fail_time = 3;
+	bool is_final = 4;
+}

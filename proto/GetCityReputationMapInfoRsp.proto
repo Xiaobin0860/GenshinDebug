@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+message GetCityReputationMapInfoRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2824;
+	}
+
+	int32 retcode = 1;
+	repeated uint32 reward_city_list = 2;
+	bool is_new_request = 3;
+	bool is_new_hunting = 4;
+	repeated uint32 unlock_hunting_city_list = 5;
+}

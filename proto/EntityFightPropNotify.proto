@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message EntityFightPropNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1289;
+	}
+
+	uint32 entity_id = 1;
+	map<uint32, float> fight_prop_map = 2;
+}

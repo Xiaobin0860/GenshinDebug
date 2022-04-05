@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "ItemParam.proto";
+
+message BattlePassBuySuccNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2630;
+	}
+
+	uint32 schedule_id = 1;
+	uint32 product_play_type = 2;
+	repeated ItemParam item_list = 3;
+	uint32 add_point = 4;
+}

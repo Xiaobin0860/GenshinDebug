@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message AbilityMixinWindSeedSpawner {
+	message AddSignal {
+	}
+	message RefreshSeed {
+		repeated Vector pos_list = 1;
+	}
+	message CatchSeed {
+		uint32 entity_id = 1;
+	}
+
+	oneof Cmd {
+		AddSignal add_signal = 1;
+		RefreshSeed refresh_seed = 2;
+		CatchSeed catch_seed = 3;
+	}
+}

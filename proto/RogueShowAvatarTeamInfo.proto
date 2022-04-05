@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "RogueAvatarInfo.proto";
+
+message RogueShowAvatarTeamInfo {
+	repeated RogueAvatarInfo avatar_list = 1;
+}

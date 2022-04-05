@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message PushTipsData {
+	uint32 push_tips_id = 1;
+	uint32 state = 2;
+}

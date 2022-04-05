@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "ForwardType.proto";
+import "EvtRushMoveInfo.proto";
+
+message EvtRushMoveNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 326;
+	}
+
+	ForwardType forward_type = 1;
+	EvtRushMoveInfo evt_rush_move_info = 2;
+}

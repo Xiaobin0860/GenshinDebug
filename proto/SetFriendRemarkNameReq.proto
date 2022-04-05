@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message SetFriendRemarkNameReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 4011;
+	}
+
+	uint32 uid = 1;
+	string remark_name = 2;
+}

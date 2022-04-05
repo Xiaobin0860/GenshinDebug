@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message AsterLargeDetailInfo {
+	bool is_open = 1;
+	uint32 begin_time = 2;
+}

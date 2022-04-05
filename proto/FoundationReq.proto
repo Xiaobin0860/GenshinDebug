@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "FoundationOpType.proto";
+
+message FoundationReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 819;
+	}
+
+	uint32 gadget_entity_id = 1;
+	FoundationOpType op_type = 2;
+	uint32 building_id = 3;
+	uint32 point_config_id = 4;
+}

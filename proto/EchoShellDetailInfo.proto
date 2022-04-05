@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message EchoShellDetailInfo {
+	repeated uint32 taken_reward_list = 1;
+	repeated uint32 shell_list = 2;
+}

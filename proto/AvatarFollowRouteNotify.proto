@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Route.proto";
+
+message AvatarFollowRouteNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3193;
+	}
+
+	Route route = 1;
+	uint32 start_scene_time_ms = 2;
+	uint32 entity_id = 3;
+	string client_params = 4;
+}

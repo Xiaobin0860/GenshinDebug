@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "AvatarInfo.proto";
+
+message DungeonCandidateTeamAvatar {
+	uint32 player_uid = 1;
+	AvatarInfo avatar_info = 2;
+}

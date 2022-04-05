@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "ObstacleInfo.proto";
+
+message ObstacleModifyNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 2389;
+	}
+
+	uint32 scene_id = 1;
+	repeated ObstacleInfo add_obstacles = 2;
+	repeated int32 remove_obstacle_ids = 3;
+}

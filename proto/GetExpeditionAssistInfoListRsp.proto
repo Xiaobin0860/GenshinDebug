@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "ExpeditionAssistInfo.proto";
+
+message GetExpeditionAssistInfoListRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2113;
+	}
+
+	int32 retcode = 1;
+	repeated ExpeditionAssistInfo assist_info_list = 2;
+}

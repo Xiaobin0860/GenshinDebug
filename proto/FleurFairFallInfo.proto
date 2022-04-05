@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message FleurFairFallInfo {
+	uint32 best_score = 1;
+}

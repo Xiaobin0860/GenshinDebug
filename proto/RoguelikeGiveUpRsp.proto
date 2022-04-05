@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "RoguelikeDungeonSettleInfo.proto";
+
+message RoguelikeGiveUpRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8605;
+	}
+
+	oneof Info {
+		RoguelikeDungeonSettleInfo settle_info = 3;
+	}
+	uint32 stage_id = 1;
+	int32 retcode = 2;
+}

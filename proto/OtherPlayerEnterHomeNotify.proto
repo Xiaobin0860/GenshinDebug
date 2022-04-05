@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+message OtherPlayerEnterHomeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4460;
+	}
+
+	enum Reason {
+		INVALID = 0;
+		ENTER = 1;
+		LEAVE = 2;
+	}
+
+	string nickname = 1;
+	Reason reason = 2;
+}

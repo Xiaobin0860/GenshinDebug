@@ -1,0 +1,15 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "HomeFurnitureData.proto";
+import "Vector.proto";
+import "HomeNpcData.proto";
+import "HomeFurnitureSuiteData.proto";
+
+message HomeSceneSnapshot {
+	uint32 scene_id = 1;
+	repeated HomeNpcData deploy_npc_list = 4;
+	repeated HomeFurnitureSuiteData furniture_suite_list = 5;
+	HomeFurnitureData main_house = 9;
+	Vector djinn_pos = 11;
+}

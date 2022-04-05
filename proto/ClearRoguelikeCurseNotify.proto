@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message ClearRoguelikeCurseNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8680;
+	}
+
+	bool is_clear_all = 1;
+	map<uint32, uint32> clear_curse_map = 2;
+	uint32 card_id = 3;
+	bool is_curse_all_clear = 4;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message AntiAddictNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 128;
+	}
+
+	int32 msg_type = 1;
+	string msg = 2;
+	string level = 3;
+}

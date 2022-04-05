@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message CurVehicleInfo {
+	uint32 entity_id = 1;
+	uint32 pos = 2;
+}

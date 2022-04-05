@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message CoopCg {
+	uint32 id = 1;
+	bool is_unlock = 2;
+}

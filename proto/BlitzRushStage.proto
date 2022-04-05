@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message BlitzRushStage {
+	uint32 open_time = 1;
+	bool is_open = 2;
+}

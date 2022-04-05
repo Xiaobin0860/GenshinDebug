@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "PlayerDieOption.proto";
+
+message DungeonDieOptionRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 924;
+	}
+
+	int32 retcode = 1;
+	PlayerDieOption die_option = 2;
+	uint32 revive_count = 3;
+}

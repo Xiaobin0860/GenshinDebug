@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message GachaUpInfo {
+	uint32 item_parent_type = 1;
+	repeated uint32 item_id_list = 2;
+}

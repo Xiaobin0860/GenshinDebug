@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "ExhibitionDisplayInfo.proto";
+import "HideAndSeekSettleInfo.proto";
+
+message HideAndSeekSettleNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5308;
+	}
+
+	enum SettleReason {
+		TIME_OUT = 0;
+		SETTLE_PLAY_END = 1;
+		SETTLE_PLAYER_QUIT = 2;
+	}
+
+	uint32 play_index = 1;
+	uint32 stage_type = 2;
+	uint32 cost_time = 3;
+	repeated uint32 winner_list = 4;
+	SettleReason reason = 5;
+	repeated ExhibitionDisplayInfo score_list = 6;
+	repeated HideAndSeekSettleInfo settle_info_list = 7;
+	bool is_record_score = 8;
+}

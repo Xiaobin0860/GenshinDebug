@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message WorktopOptionNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 884;
+	}
+
+	uint32 gadget_entity_id = 1;
+	repeated uint32 option_list = 2;
+}

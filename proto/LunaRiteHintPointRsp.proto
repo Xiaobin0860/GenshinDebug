@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "LunaRiteHintStatusType.proto";
+import "LunaRiteHintPoint.proto";
+
+message LunaRiteHintPointRsp {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 8336;
+	}
+
+	int32 retcode = 1;
+	uint32 area_id = 2;
+	repeated LunaRiteHintPoint hint_point = 3;
+	LunaRiteHintStatusType hint_status = 4;
+}

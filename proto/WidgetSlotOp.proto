@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+enum WidgetSlotOp {
+	ATTACH = 0;
+	DETACH = 1;
+}

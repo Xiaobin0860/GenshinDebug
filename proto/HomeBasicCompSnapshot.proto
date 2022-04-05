@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+
+message HomeBasicCompSnapshot {
+	uint64 exp = 1;
+	uint32 level = 2;
+}

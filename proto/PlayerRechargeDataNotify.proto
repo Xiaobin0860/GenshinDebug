@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "ProductPriceTier.proto";
+
+message PlayerRechargeDataNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4124;
+	}
+
+	uint32 card_product_remain_days = 1;
+	repeated ProductPriceTier product_price_tier_list = 2;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message AbilityActionFireAfterImgae {
+	Vector dir = 1;
+}

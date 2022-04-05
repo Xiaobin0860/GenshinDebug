@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message ScenePlayInviteResultNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 4429;
+	}
+
+	uint32 play_id = 1;
+	bool is_all_argee = 2;
+}

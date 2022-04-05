@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "CylinderRegionSize.proto";
+import "PolygonRegionSize.proto";
+
+message PlayerEyePointStateNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3407;
+	}
+
+	oneof RegionSize {
+		float sphere_radius = 100;
+		Vector cubic_size = 101;
+		CylinderRegionSize cylinder_size = 102;
+		PolygonRegionSize polygon_size = 103;
+	}
+	bool is_use_eye_point = 1;
+	Vector eye_point_pos = 2;
+	uint32 region_entity_id = 3;
+	uint32 region_group_id = 4;
+	uint32 region_config_id = 5;
+	uint32 region_shape = 6;
+	bool is_filter_stream_pos = 7;
+}

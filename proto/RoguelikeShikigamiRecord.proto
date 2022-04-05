@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message RoguelikeShikigamiRecord {
+	uint32 id = 1;
+	uint32 level = 2;
+}

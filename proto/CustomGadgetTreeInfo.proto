@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "CustomCommonNodeInfo.proto";
+
+message CustomGadgetTreeInfo {
+	repeated CustomCommonNodeInfo node_list = 1;
+}

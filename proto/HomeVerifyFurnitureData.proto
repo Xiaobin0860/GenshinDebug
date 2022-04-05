@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message HomeVerifyFurnitureData {
+	uint32 id = 1;
+	uint32 num = 2;
+	repeated uint32 type = 3;
+}

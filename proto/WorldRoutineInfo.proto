@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+message WorldRoutineInfo {
+	uint32 routine_id = 1;
+	uint32 progress = 2;
+	uint32 finish_progress = 3;
+	bool is_finished = 4;
+}

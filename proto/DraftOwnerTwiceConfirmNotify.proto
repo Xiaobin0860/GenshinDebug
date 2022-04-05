@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message DraftOwnerTwiceConfirmNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5479;
+	}
+
+	uint32 draft_id = 1;
+	uint32 twice_confirm_deadline_time = 2;
+}

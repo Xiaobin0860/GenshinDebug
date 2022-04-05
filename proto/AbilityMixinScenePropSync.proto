@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "MassivePropSyncInfo.proto";
+
+message AbilityMixinScenePropSync {
+	repeated MassivePropSyncInfo massive_prop_list = 1;
+	repeated int64 delete_id_list = 2;
+	bool is_clear_all = 3;
+}

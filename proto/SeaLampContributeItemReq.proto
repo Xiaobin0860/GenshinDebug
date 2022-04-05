@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "ItemParam.proto";
+
+message SeaLampContributeItemReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 2200;
+	}
+
+	uint32 activity_id = 2;
+	repeated ItemParam item_list = 1;
+}

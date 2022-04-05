@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message EvtSetAttackTargetInfo {
+	uint32 entity_id = 1;
+	uint32 attack_target_id = 2;
+}

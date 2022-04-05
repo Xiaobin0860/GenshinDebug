@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtMonsterDoBlink {
+	uint32 entity_id = 1;
+	Vector target_pos = 2;
+	Vector target_rot = 3;
+}

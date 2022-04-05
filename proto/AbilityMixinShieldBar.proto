@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message AbilityMixinShieldBar {
+	uint32 element_type = 1;
+	float shield = 2;
+	float max_shield = 3;
+}

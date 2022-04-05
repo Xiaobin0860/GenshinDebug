@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message AbilityActionCreateTile {
+	Vector pos = 1;
+	Vector rot = 2;
+}

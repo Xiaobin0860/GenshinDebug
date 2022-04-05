@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "FleurFairMusicRecord.proto";
+
+message FleurFairMusicGameInfo {
+	map<uint32, FleurFairMusicRecord> music_record_map = 1;
+}

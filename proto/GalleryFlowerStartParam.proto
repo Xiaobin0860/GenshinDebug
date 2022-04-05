@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message GalleryFlowerStartParam {
+	uint32 target_score = 1;
+}

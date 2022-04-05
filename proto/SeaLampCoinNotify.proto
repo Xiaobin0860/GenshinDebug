@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message SeaLampCoinNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2022;
+	}
+
+	uint32 sea_lamp_coin = 1;
+}

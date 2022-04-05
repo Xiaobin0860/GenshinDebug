@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "ReportReasonType.proto";
+
+message PlayerReportReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 4021;
+	}
+
+	uint32 target_uid = 1;
+	ReportReasonType reason = 2;
+	string content = 3;
+	uint32 target_home_module_id = 4;
+	string target_home_module_name = 5;
+}

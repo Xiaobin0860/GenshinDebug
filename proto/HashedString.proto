@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message HashedString {
+	uint32 hash = 1;
+}

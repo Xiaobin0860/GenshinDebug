@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "ChannelerSlabOneoffDungeon.proto";
+import "ChannelerSlabChallenge.proto";
+
+message ChannelerSlabChallengeStage {
+	uint32 stage_id = 1;
+	uint32 open_time = 2;
+	repeated ChannelerSlabChallenge challenge_list = 3;
+	ChannelerSlabOneoffDungeon dungeon_info = 4;
+	bool is_open = 5;
+}

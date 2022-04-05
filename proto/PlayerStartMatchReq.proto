@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "MatchType.proto";
+
+message PlayerStartMatchReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 4153;
+	}
+
+	MatchType match_type = 1;
+	uint32 dungeon_id = 11;
+	uint32 mp_play_id = 12;
+	uint32 mechanicus_difficult_level = 13;
+	uint32 match_id = 14;
+	repeated uint32 match_param_list = 15;
+}

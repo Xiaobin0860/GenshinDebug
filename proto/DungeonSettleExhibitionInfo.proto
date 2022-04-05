@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "OnlinePlayerInfo.proto";
+import "ExhibitionDisplayInfo.proto";
+
+message DungeonSettleExhibitionInfo {
+	OnlinePlayerInfo player_info = 1;
+	repeated ExhibitionDisplayInfo card_list = 2;
+}

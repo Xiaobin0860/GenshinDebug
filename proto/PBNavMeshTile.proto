@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "PBNavMeshPoly.proto";
+
+message PBNavMeshTile {
+	repeated Vector vecs = 1;
+	repeated PBNavMeshPoly polys = 2;
+}

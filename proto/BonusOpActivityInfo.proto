@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message BonusOpActivityInfo {
+	uint32 left_bonus_count = 1;
+}

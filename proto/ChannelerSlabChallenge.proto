@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "ChannelerSlabCamp.proto";
+
+message ChannelerSlabChallenge {
+	repeated ChannelerSlabCamp camp_list = 1;
+	uint32 active_camp_index = 2;
+}

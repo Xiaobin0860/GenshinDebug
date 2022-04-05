@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "YSFreedom.Common.Protocol";
+
+import "HomeModuleSnapshot.proto";
+
+message HomeSceneCompSnapshot {
+	uint32 cur_module_id = 1;
+	repeated HomeModuleSnapshot module_list = 2;
+}

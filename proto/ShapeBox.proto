@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message ShapeBox {
+	Vector center = 1;
+	Vector axis0 = 2;
+	Vector axis1 = 3;
+	Vector axis2 = 4;
+	Vector extents = 5;
+}

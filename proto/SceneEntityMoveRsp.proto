@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "MotionInfo.proto";
+
+message SceneEntityMoveRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		ENET_CHANNEL_ID = 1;
+		CMD_ID = 261;
+	}
+
+	int32 retcode = 1;
+	uint32 entity_id = 2;
+	MotionInfo fail_motion = 3;
+	uint32 scene_time = 4;
+	uint32 reliable_seq = 5;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message MassiveGrassInfo {
+	uint32 id = 1;
+	Vector center = 2;
+	Vector size = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message HitTreeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 3484;
+	}
+
+	uint32 tree_type = 1;
+	Vector tree_pos = 2;
+	Vector drop_pos = 3;
+}

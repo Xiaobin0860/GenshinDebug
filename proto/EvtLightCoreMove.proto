@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtLightCoreMove {
+	uint32 entity_id = 1;
+	float speed = 2;
+	Vector target_pos = 3;
+	float acelerate = 4;
+	float max_absorb_time = 5;
+}

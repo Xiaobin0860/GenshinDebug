@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtSyncTransform {
+	uint32 entity_id = 1;
+	Vector entity_pos = 2;
+	Vector entity_rot = 3;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "LockedPersonallineData.proto";
+
+message PersonalLineAllDataRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 499;
+	}
+
+	int32 retcode = 1;
+	uint32 cur_finished_daily_task_count = 2;
+	uint32 legendary_key_count = 3;
+	repeated uint32 ongoing_personal_line_list = 4;
+	repeated uint32 can_be_unlocked_personal_line_list = 5;
+	repeated LockedPersonallineData locked_personal_line_list = 6;
+}

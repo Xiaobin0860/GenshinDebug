@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "SceneGalleryBalloonInfo.proto";
+import "SceneGalleryFallInfo.proto";
+import "SceneGalleryFlowerInfo.proto";
+import "SceneGalleryBulletInfo.proto";
+import "SceneGalleryBrokenFloorInfo.proto";
+import "SceneGalleryHideAndSeekInfo.proto";
+import "SceneGalleryBuoyantCombatInfo.proto";
+import "SceneGalleryBounceConjuringInfo.proto";
+import "SceneGalleryHandballInfo.proto";
+import "SceneGallerySumoInfo.proto";
+import "GalleryStageType.proto";
+import "SceneGalleryProgressInfo.proto";
+
+message SceneGalleryInfo {
+	oneof Info {
+		SceneGalleryBalloonInfo balloon_info = 10;
+		SceneGalleryFallInfo fall_info = 11;
+		SceneGalleryFlowerInfo flower_info = 12;
+		SceneGalleryBulletInfo bullet_info = 13;
+		SceneGalleryBrokenFloorInfo broken_floor_info = 14;
+		SceneGalleryHideAndSeekInfo hide_and_seek_info = 15;
+		SceneGalleryBuoyantCombatInfo buoyant_combat_info = 16;
+		SceneGalleryBounceConjuringInfo bounce_conjuring_info = 17;
+		SceneGalleryHandballInfo handball_info = 18;
+		SceneGallerySumoInfo sumo_info = 19;
+	}
+	uint32 gallery_id = 1;
+	uint32 end_time = 2;
+	GalleryStageType stage = 3;
+	uint32 pre_start_end_time = 4;
+	repeated SceneGalleryProgressInfo progress_info_list = 5;
+	uint32 player_count = 6;
+}

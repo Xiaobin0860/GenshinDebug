@@ -1,0 +1,21 @@
+{
+  "name": "nicksgenshinserver",
+  "version": "1.0.0",
+  "description": "Nick's Genshin Private Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick",
+  "license": "ISC",
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "ffi-napi": "^4.0.3",
+    "http": "0.0.1-security",
+    "net": "^1.0.2",
+    "node-kcp": "^1.0.12",
+    "protobufjs": "^6.11.2",
+    "sqlite3": "^5.0.2",
+    "udp-proxy": "^1.2.0"
+  }
+}

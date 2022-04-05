@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "FleurFairBalloonInfo.proto";
+import "FleurFairFallInfo.proto";
+import "FleurFairMusicGameInfo.proto";
+
+message FleurFairMinigameInfo {
+	oneof Detail {
+		FleurFairBalloonInfo balloon_info = 11;
+		FleurFairFallInfo fall_info = 12;
+		FleurFairMusicGameInfo music_info = 13;
+	}
+	uint32 minigame_id = 1;
+	uint32 open_time = 2;
+	bool is_open = 3;
+}

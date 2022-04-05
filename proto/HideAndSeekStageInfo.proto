@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "HideAndSeekStageType.proto";
+import "HideAndSeekPlayerBattleInfo.proto";
+
+message HideAndSeekStageInfo {
+	HideAndSeekStageType stage_type = 1;
+	uint32 hunter_uid = 2;
+	repeated uint32 hider_uid_list = 3;
+	map<uint32, HideAndSeekPlayerBattleInfo> battle_info_map = 4;
+	uint32 map_id = 5;
+}

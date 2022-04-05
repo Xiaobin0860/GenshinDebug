@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message GroupUnloadNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3011;
+	}
+
+	repeated uint32 group_list = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message ServerCondMeetQuestListUpdateNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 492;
+	}
+
+	repeated uint32 add_quest_id_list = 1;
+	repeated uint32 del_quest_id_list = 2;
+}

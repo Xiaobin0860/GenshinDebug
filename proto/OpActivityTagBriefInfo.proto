@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message OpActivityTagBriefInfo {
+	uint32 op_activity_type = 1;
+	uint32 config_id = 2;
+	bool has_reward = 3;
+}

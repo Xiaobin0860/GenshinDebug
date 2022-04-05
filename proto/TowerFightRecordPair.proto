@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message TowerFightRecordPair {
+	uint32 avatar_id = 1;
+	uint32 data = 2;
+}

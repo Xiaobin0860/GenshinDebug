@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message HomeTransferData {
+	uint32 guid = 1;
+	Vector spawn_pos = 2;
+}

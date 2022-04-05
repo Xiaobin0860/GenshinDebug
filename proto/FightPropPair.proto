@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message FightPropPair {
+	uint32 prop_type = 1;
+	float prop_value = 2;
+}

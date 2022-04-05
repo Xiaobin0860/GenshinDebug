@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message FallPlayerBrief {
+	uint32 uid = 1;
+	uint32 score = 2;
+	bool is_ground = 3;
+}

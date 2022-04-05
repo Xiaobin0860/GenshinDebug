@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "HomeMarkPointFurnitureData.proto";
+
+message HomeMarkPointSceneData {
+	uint32 module_id = 1;
+	uint32 scene_id = 2;
+	repeated HomeMarkPointFurnitureData furniture_list = 3;
+	Vector teapot_spirit_pos = 4;
+}

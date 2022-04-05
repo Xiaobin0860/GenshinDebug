@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "SumoDungeonTeam.proto";
+
+message SumoSetNoSwitchPunishTimeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8815;
+	}
+
+	uint32 activity_id = 1;
+	uint32 stage_id = 2;
+	repeated SumoDungeonTeam dungeon_team_list = 3;
+	uint32 cur_team_index = 4;
+	uint32 next_valid_switch_time = 5;
+	uint32 no_switch_punish_time = 6;
+}

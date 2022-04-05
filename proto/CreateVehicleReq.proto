@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message CreateVehicleReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 896;
+	}
+
+	uint32 vehicle_id = 1;
+	uint32 scene_point_id = 2;
+	Vector pos = 3;
+	Vector rot = 4;
+}

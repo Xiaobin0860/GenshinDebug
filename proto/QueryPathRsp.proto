@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message QueryPathRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 2318;
+	}
+
+	enum PathStatusType {
+		STATUS_FAIL = 0;
+		STATUS_SUCC = 1;
+		STATUS_PARTIAL = 2;
+	}
+
+	int32 retcode = 1;
+	int32 query_id = 2;
+	PathStatusType query_status = 3;
+	repeated Vector corners = 4;
+}

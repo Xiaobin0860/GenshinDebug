@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "LunaRiteHintPointType.proto";
+
+message LunaRiteHintPoint {
+	uint32 index = 1;
+	uint32 area_id = 2;
+	Vector pos = 3;
+	LunaRiteHintPointType type = 4;
+}

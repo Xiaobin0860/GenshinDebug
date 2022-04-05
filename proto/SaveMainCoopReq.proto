@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+message SaveMainCoopReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 1977;
+	}
+
+	uint32 id = 1;
+	uint32 save_point_id = 2;
+	uint32 self_confidence = 3;
+	map<uint32, int32> normal_var_map = 4;
+	map<uint32, int32> temp_var_map = 5;
+}

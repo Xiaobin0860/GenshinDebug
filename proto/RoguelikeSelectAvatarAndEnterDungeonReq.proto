@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message RoguelikeSelectAvatarAndEnterDungeonReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 8510;
+	}
+
+	uint32 stage_id = 1;
+	repeated uint64 onstage_avatar_guid_list = 2;
+	repeated uint64 backstage_avatar_guid_list = 3;
+}

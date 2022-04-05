@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+message GachaWishRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 1501;
+	}
+
+	int32 retcode = 1;
+	uint32 gacha_type = 2;
+	uint32 gacha_schedule_id = 3;
+	uint32 wish_item_id = 4;
+	uint32 wish_progress = 5;
+	uint32 wish_max_progress = 6;
+}

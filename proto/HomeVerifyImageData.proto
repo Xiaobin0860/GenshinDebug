@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message HomeVerifyImageData {
+	uint32 width = 1;
+	uint32 height = 2;
+	bytes image = 3;
+}

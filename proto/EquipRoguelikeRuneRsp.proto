@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message EquipRoguelikeRuneRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 8635;
+	}
+
+	int32 retcode = 1;
+	repeated uint32 rune_list = 2;
+}

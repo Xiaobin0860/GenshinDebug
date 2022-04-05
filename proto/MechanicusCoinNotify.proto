@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message MechanicusCoinNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 3984;
+	}
+
+	uint32 mechanicus_id = 1;
+	uint32 coin = 2;
+}

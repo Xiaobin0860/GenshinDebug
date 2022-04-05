@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+message QuestUpdateQuestVarNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 432;
+	}
+
+	uint32 parent_quest_id = 1;
+	repeated int32 quest_var = 2;
+	uint32 parent_quest_var_seq = 3;
+}

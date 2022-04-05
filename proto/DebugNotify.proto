@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+
+message DebugNotify {
+	enum Enum {
+		option allow_alias = true;
+		ZERO = 0;
+		ENET_IS_RELIABLE = 1;
+		ENET_CHANNEL_ID = 2;
+		TARGET_SERVICE = 101;
+		CMD_ID = 101;
+	}
+
+	enum Retcode {
+		SUCC = 0;
+		FAIL = 1;
+	}
+
+	uint32 id = 1;
+	string name = 2;
+	Retcode retcode = 3;
+}

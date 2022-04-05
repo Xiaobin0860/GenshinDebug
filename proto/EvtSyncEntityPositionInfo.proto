@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtSyncEntityPositionInfo {
+	uint32 entity_id = 1;
+	uint32 state_hash = 2;
+	uint32 normalized_time_compact = 3;
+	int32 face_angle_compact = 4;
+	Vector pos = 5;
+}

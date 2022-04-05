@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message AbilityActionServerMonsterLog {
+	repeated int32 param_list = 1;
+}

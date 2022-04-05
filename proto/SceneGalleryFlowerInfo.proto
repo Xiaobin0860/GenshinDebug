@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message SceneGalleryFlowerInfo {
+	uint32 cur_score = 1;
+	uint32 target_score = 2;
+	uint32 end_time = 3;
+}

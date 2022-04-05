@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message PBNavMeshPoly {
+	enum EdgeType {
+		INNER = 0;
+		TILE_BOUND = 1;
+		TILE_BOUND_UNCONNECT = 2;
+	}
+
+	repeated int32 vects = 1;
+	repeated EdgeType edge_types = 2;
+	int32 area = 3;
+}

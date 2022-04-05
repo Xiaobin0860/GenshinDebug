@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "GroupLinkBundle.proto";
+
+message GroupLinkChangeNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 5793;
+	}
+
+	GroupLinkBundle bundle = 1;
+}

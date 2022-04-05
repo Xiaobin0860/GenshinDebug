@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message ChatEmojiCollectionData {
+	repeated uint32 emoji_id_list = 1;
+}

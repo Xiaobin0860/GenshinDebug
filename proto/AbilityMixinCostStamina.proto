@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message AbilityMixinCostStamina {
+	bool is_swim = 1;
+}

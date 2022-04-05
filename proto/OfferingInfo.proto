@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message OfferingInfo {
+	uint32 offering_id = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "ResVersionConfig.proto";
+
+message GetNextResourceInfoRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 190;
+	}
+
+	int32 retcode = 1;
+	ResVersionConfig next_res_version_config = 2;
+	string next_resource_url = 3;
+}

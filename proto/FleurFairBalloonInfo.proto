@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message FleurFairBalloonInfo {
+	uint32 best_score = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "GivingRecord.proto";
+
+message GivingRecordNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 144;
+	}
+
+	repeated GivingRecord giving_record_list = 1;
+}

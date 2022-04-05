@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "WidgetCreatorOpType.proto";
+import "WidgetCreateLocationInfo.proto";
+
+message WidgetCreatorInfo {
+	WidgetCreatorOpType op_type = 1;
+	uint32 entity_id = 2;
+	WidgetCreateLocationInfo location_info = 3;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "ParentQuest.proto";
+
+message FinishedParentQuestNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 484;
+	}
+
+	repeated ParentQuest parent_quest_list = 1;
+}

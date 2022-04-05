@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "CustomGadgetTreeInfo.proto";
+
+message GadgetCustomTreeInfoNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 809;
+	}
+
+	uint32 gadget_entity_id = 1;
+	CustomGadgetTreeInfo custom_gadget_tree_info = 2;
+}

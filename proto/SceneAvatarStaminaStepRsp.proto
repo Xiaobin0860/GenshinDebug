@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message SceneAvatarStaminaStepRsp {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		ENET_CHANNEL_ID = 1;
+		CMD_ID = 212;
+	}
+
+	int32 retcode = 1;
+	bool use_client_rot = 2;
+	Vector rot = 3;
+}

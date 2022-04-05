@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "LanguageType.proto";
+import "HomeVerifySceneData.proto";
+
+message HomeVerifyData {
+	uint32 uid = 1;
+	string region = 2;
+	uint32 timestamp = 3;
+	LanguageType lang = 4;
+	HomeVerifySceneData home_info = 5;
+}

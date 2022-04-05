@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message StatueGadgetInfo {
+	repeated uint32 opened_statue_uid_list = 1;
+}

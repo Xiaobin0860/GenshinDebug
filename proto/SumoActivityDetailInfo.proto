@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "SumoStageData.proto";
+
+message SumoActivityDetailInfo {
+	map<uint32, SumoStageData> sumo_stage_map = 1;
+	uint32 difficulty_id = 2;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "InterOpType.proto";
+import "ItemParam.proto";
+
+message MiracleRingDeliverItemReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 5207;
+	}
+
+	uint32 gadget_entity_id = 1;
+	InterOpType op_type = 2;
+	uint32 gadget_id = 3;
+	repeated uint64 food_weapon_guid_list = 4;
+	repeated ItemParam item_param_list = 5;
+}

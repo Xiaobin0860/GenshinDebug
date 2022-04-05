@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+message ArenaChallengeChildChallengeInfo {
+	uint32 challenge_index = 1;
+	uint32 challenge_id = 2;
+	uint32 challenge_type = 3;
+	bool is_success = 4;
+	bool is_settled = 5;
+}

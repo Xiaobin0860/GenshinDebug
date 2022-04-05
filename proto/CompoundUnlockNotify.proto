@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+message CompoundUnlockNotify {
+	enum CmdId {
+		option allow_alias = true;
+		NONE = 0;
+		ENET_CHANNEL_ID = 0;
+		ENET_IS_RELIABLE = 1;
+		CMD_ID = 138;
+	}
+
+	uint32 compound_id = 1;
+}

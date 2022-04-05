@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message PlayerUidExtInfo {
+	uint32 reg_platform = 1;
+}

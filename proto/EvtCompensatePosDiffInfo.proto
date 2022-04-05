@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Vector.proto";
+
+message EvtCompensatePosDiffInfo {
+	uint32 entity_id = 1;
+	uint32 cur_hash = 2;
+	int32 face_angle_compact = 3;
+	Vector cur_pos = 4;
+	uint32 normalized_time_compact = 5;
+}

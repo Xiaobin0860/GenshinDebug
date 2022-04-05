@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+
+message GetOnlinePlayerInfoReq {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 14;
+	}
+
+	oneof PlayerId {
+		uint32 target_uid = 2;
+		string online_id = 3;
+		string psn_id = 4;
+	}
+	bool is_online_id = 1;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+message SceneAudioNotify {
+	enum CmdId {
+		option allow_alias = true;
+		ENET_CHANNEL_ID = 0;
+		NONE = 0;
+		ENET_IS_RELIABLE = 1;
+		IS_ALLOW_CLIENT = 1;
+		CMD_ID = 3403;
+	}
+
+	uint32 source_uid = 1;
+	int32 type = 2;
+	repeated uint32 param1 = 3;
+	repeated float param2 = 4;
+	repeated string param3 = 5;
+}
