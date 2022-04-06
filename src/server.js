@@ -10,6 +10,9 @@ const c = require("../util/colog");
 // Networking
 const dgram = require("dgram");
 const kcp = require("node-kcp");
+const {
+    Console
+} = require("console");
 
 // User
 var clients = {};
@@ -209,10 +212,10 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
             sendPacketAsyncByName(kcpobj, "WorldOwnerDailyTaskNotify", keyBuffer);
 
             // Info Player
-            const WorldPlayerInfoNotify = await dataUtil.dataToProtobuffer(fs.readFileSync("./bin/WorldPlayerInfoNotify.bin"), dataUtil.getPacketIDByProtoName("WorldPlayerInfoNotify"))
-            WorldPlayerInfoNotify.playerInfoList[0].name = tes_user;
-            WorldPlayerInfoNotify.playerInfoList[0].playerLevel = tes_level;
-            data = await dataUtil.objToProtobuffer(WorldPlayerInfoNotify, dataUtil.getPacketIDByProtoName("WorldPlayerInfoNotify"));
+            //const WorldPlayerInfoNotify = await dataUtil.dataToProtobuffer(fs.readFileSync("./bin/WorldPlayerInfoNotify.bin"), dataUtil.getPacketIDByProtoName("WorldPlayerInfoNotify"))
+            //WorldPlayerInfoNotify.playerInfoList[0].name = tes_user;
+            //WorldPlayerInfoNotify.playerInfoList[0].playerLevel = tes_level;
+            data = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("WorldPlayerInfoNotify"));
             sendPacketAsyncByName(kcpobj, "WorldPlayerInfoNotify", keyBuffer, data);
 
             // Load Dunia Data
@@ -248,10 +251,10 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
             sendPacketAsyncByName(kcpobj, "HostPlayerNotify", keyBuffer);
 
             // Load Player List?
-            const ScenePlayerInfoNotify = await dataUtil.dataToProtobuffer(fs.readFileSync("./bin/ScenePlayerInfoNotify.bin"), dataUtil.getPacketIDByProtoName("ScenePlayerInfoNotify"))
-            ScenePlayerInfoNotify.playerInfoList[0].name = tes_user
-            ScenePlayerInfoNotify.playerInfoList[0].onlinePlayerInfo.nickname = tes_user;
-            data = await dataUtil.objToProtobuffer(ScenePlayerInfoNotify, dataUtil.getPacketIDByProtoName("ScenePlayerInfoNotify"));
+            //const ScenePlayerInfoNotify = await dataUtil.dataToProtobuffer(fs.readFileSync("./bin/ScenePlayerInfoNotify.bin"), dataUtil.getPacketIDByProtoName("ScenePlayerInfoNotify"))
+            //ScenePlayerInfoNotify.playerInfoList[0].name = tes_user
+            //ScenePlayerInfoNotify.playerInfoList[0].onlinePlayerInfo.nickname = tes_user;
+            data = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("ScenePlayerInfoNotify"));
             sendPacketAsyncByName(kcpobj, "ScenePlayerInfoNotify", keyBuffer, data);
 
             // Load Player?
@@ -346,11 +349,25 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
             break;
         case "GetAllSceneGalleryInfoReq":
             // Tab Gallery info
-            sendPacketAsyncByName(kcpobj, "GetAllSceneGalleryInfoRsp", keyBuffer,data);
+            console.log("protobuff GetAllSceneGalleryInfoReq: ", protobuff);
             break;
         case "SetOpenStateReq":
-            // Tab Stats Info Gacha Banner?
-            sendPacketAsyncByName(kcpobj, "SetOpenStateRsp", keyBuffer,data);
+            // Tab Stats
+            console.log("protobuff SetOpenStateReq: ", protobuff);
+            var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("SetOpenStateRsp"));
+            sendPacketAsyncByName(kcpobj, "SetOpenStateRsp", keyBuffer, s);
+            break;
+        case "AvatarUpgradeReq":
+            // User: Upgarde Character
+            var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("AvatarUpgradeRsp"));
+            sendPacketAsyncByName(kcpobj, "AvatarUpgradeRsp", keyBuffer, s);
+            console.log("protobuff1 AvatarUpgradeReq: ", protobuff);
+            break;
+        case "WearEquipReq":
+            // User: Ganti Senjata
+            var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("WearEquipRsp"));
+            sendPacketAsyncByName(kcpobj, "WearEquipRsp", keyBuffer, s);
+            console.log("protobuff1 WearEquipReq: ", protobuff);
             break;
         case "GetWidgetSlotReq":
             sendPacketAsyncByName(kcpobj, "GetWidgetSlotRsp", keyBuffer)
@@ -400,6 +417,7 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
             sendPacketAsyncByName(kcpobj, "GetScenePointRsp" + XD, keyBuffer)
             PointRspCount++
             break;
+        case "EvtAvatarUpdateFocusNotify": // User: saat char fokus pakai item/senjata
         case "EvtCreateGadgetNotify": // jika baru pakai item
         case "EvtDestroyGadgetNotify": //jika sudah pakai item lalu hapus?
         case "EvtDoSkillSuccNotify": // jika sudah pakai item
