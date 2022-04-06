@@ -104,9 +104,8 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
 
     // Packed ID By Name so no more HARDCODING
     const packetIdName = dataUtil.getProtoNameByPacketID(packetID);
-
-    // Data is declared here because node-js would say data is already defined
-    var data; // data dynamic ini?
+    
+    var data; // Dta Akun Saat Proses Handel
 
     switch (packetIdName) {
         case "PingReq":
@@ -352,22 +351,22 @@ async function handleSendPacket(protobuff, packetID, kcpobj, keyBuffer) {
             console.log("protobuff GetAllSceneGalleryInfoReq: ", protobuff);
             break;
         case "SetOpenStateReq":
-            // Tab Stats
-            console.log("protobuff SetOpenStateReq: ", protobuff);
+            // Tab Stats            
             var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("SetOpenStateRsp"));
             sendPacketAsyncByName(kcpobj, "SetOpenStateRsp", keyBuffer, s);
+            console.log("protobuff SetOpenStateReq: ", s);
             break;
         case "AvatarUpgradeReq":
             // User: Upgarde Character
             var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("AvatarUpgradeRsp"));
             sendPacketAsyncByName(kcpobj, "AvatarUpgradeRsp", keyBuffer, s);
-            console.log("protobuff1 AvatarUpgradeReq: ", protobuff);
+            console.log("protobuff1 AvatarUpgradeReq: ", s);
             break;
         case "WearEquipReq":
             // User: Ganti Senjata
             var s = await dataUtil.objToProtobuffer(protobuff, dataUtil.getPacketIDByProtoName("WearEquipRsp"));
             sendPacketAsyncByName(kcpobj, "WearEquipRsp", keyBuffer, s);
-            console.log("protobuff1 WearEquipReq: ", protobuff);
+            console.log("protobuff1 WearEquipReq: ", s);
             break;
         case "GetWidgetSlotReq":
             sendPacketAsyncByName(kcpobj, "GetWidgetSlotRsp", keyBuffer)
