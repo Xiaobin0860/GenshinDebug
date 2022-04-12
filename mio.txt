@@ -16,4 +16,4 @@
 127.0.0.1 dispatchcnglobal.yuanshen.com
 127.0.0.1 cnbeta02dispatch.yuanshen.com
 127.0.0.1 sdk-os-static.mihoyo.com
-127.0.0.1 webstatic-sea.mihoyo.com
+127.0.0.1 webstatic-sea.mihoyo.com 
